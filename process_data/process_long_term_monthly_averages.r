@@ -10,5 +10,3 @@ save(station_monthly_precip_1981_2010, file="data/station_monthly_precip_1981_20
 
 
 
-
-
