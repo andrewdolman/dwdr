@@ -1,0 +1,7 @@
+Stations_id; Stationshoehe; Geogr.Breite; Geogr.Laenge; von_datum; bis_datum; Stationsname;                                                                                                             
+  3015;  106; 52.2108; 14.1211;19060401;19561022;Lindenberg                                                                                                                                             
+  3015;   98; 52.2103; 14.1189;19561023;19671231;Lindenberg                                                                                                                                             
+  3015;   98; 52.2103; 14.1189;19680101;19711017;Lindenberg                                                                                                                                             
+  3015;   98; 52.2097; 14.1203;19711018;19780430;Lindenberg                                                                                                                                             
+  3015;   98; 52.2097; 14.1203;19780501;19930331;Lindenberg                                                                                                                                             
+  3015;   98; 52.2083; 14.1178;19930401;        ;Lindenberg                                                                                                                                             
