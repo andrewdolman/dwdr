@@ -68,3 +68,24 @@ p
 ggsave("figures/monthly_temp.png", p, width=6, height=4, dpi=300)
 
 
+
+## Weekly temp
+year_week <- ddply(lindenberg_daily_historic, .(Jahr, Week), summarise, LUFTTEMPERATUR=mean(LUFTTEMPERATUR, na.rm=T), NIEDERSCHLAGSHOEHE = sum(NIEDERSCHLAGSHOEHE, na.rm=T))
+
+week <- ddply(year_week, .(Week, Jahr), numcolwise(mean, na.rm=T))
+week_1991_2010 <- ddply(subset(week, Jahr > 1990 & Jahr < 2011), .(Week), numcolwise(mean, na.rm=T))
+
+
+p <- ggplot(week_1991_2010, aes(x=Datum, y=LUFTTEMPERATUR))
+p <- p + geom_bar(stat="identity", aes(fill="Orange"))
+p <- p + theme_bw() + scale_fill_manual("" ,values="Orange", labels="Mean temperature\n1991-2010")
+p <- p + scale_colour_manual("", values=c("Black", "Darkblue"), labels="Temperature 2013")
+p <- p + scale_x_discrete("Week") + scale_y_continuous("Temperature °C")
+p
+
+
+unique(subset(lindenberg_daily_historic, Week %in% c(30:32))$Monat)
+
+
+
+
